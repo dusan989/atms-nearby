@@ -32,48 +32,21 @@ function createTable(atms, table) {
 }
 
 /**
- * Sort ATMs by distance in giben order.
- * @param atms
- * @param boolean isAsc
- * @return array
- */
-function sortATMs(atms, isAsc = true) {
-  return atms.sort((a, b) => {
-    if (a.distance === b.distance) {
-      return 0;
-    }
-
-    if (a.distance > b.distance) {
-      return isAsc ? 1 : -1;
-    }
-
-    return isAsc ? -1 : 1;
-  });
-}
-
-/**
  * Show the given list of ATMs in the table.
  *
  * @param results
  * @param {HTMLTableElement} table
  */
 export default function showATMs(results, table) {
-  // Get first 10 from the fetched list of ATMs
-  const atms = results.filter((result, index) => index < 10);
-
-  const sortAsc = {
-    distance: true
-  };
+  // NOTE ATMs are sorting by distnce in asscending order from the start.
+  const atms = results.slice(0, 10);
 
   createTable(atms, table);
 
   document.getElementById('atms-table-distance').addEventListener('click', (event) => {
     event.preventDefault();
 
-    sortAsc.distance = !sortAsc.distance;
-
-    sortATMs(atms, sortAsc.distance);
-    createTable(atms, table);
+    createTable(atms.reverse(), table);
 
     return false;
   });
