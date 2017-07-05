@@ -1,4 +1,4 @@
-import './app.scss';
+import './styles/app.scss';
 
 import getLocation from './location/getLocation';
 import showError from './error/showError';

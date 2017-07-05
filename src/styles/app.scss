@@ -1,6 +1,8 @@
+// FONTS
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+// Materialize CSS
 // Mixins
 @import "~materialize-css/sass/components/mixins";
 @import "~materialize-css/sass/components/color";
@@ -19,3 +21,7 @@
 @import "~materialize-css/sass/components/icons-material-design";
 @import "~materialize-css/sass/components/buttons";
 @import "~materialize-css/sass/components/forms/switches";
+
+// APP CSS
+@import "body";
+@import "table";
