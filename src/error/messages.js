@@ -8,6 +8,7 @@ const errorMessages = {
   POSITION_UNAVAILABLE: 'Browser wasn\'t able to determine current location. Please try again.',
   GEOLOCATION_NOT_AVAILABLE: 'Geolocation isn\'t available in this browser. Please use another browser with this functionality.',
   DEFAULT: 'Oops, something went wrong.',
+  ZERO_RESULTS: 'Sorry, there are no results found for this location.'
 };
 
 export default errorMessages;

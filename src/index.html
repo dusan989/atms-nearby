@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>ATMs Nearby</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="/main.css">
 </head>
 <body>
@@ -40,13 +41,25 @@
 
     <div class="row">
       <div class="col s12">
-        TODO
+        <table class="highlight responsive-table hide" id="atms-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Distance (m)</th>
+              <th>Map</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
       </div>
     </div>
 
   </div>
 </main>
 
+<script type="text/javascript">window.googleKey = 'AIzaSyCdWkrVHdnJpcyv1TBPz5XtQesrTaPyX5M';</script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdWkrVHdnJpcyv1TBPz5XtQesrTaPyX5M&libraries=places,geometry"></script>
 <script src="/main.bundle.js"></script>
 </body>
 </html>
