@@ -2,7 +2,7 @@
  * Create and populate table body.
  *
  * @param atms
- * @param {HTMLTableElement} table
+ * @param {HTMLElement} table
  */
 function createTable(atms, table) {
   table.classList.remove('hide');
@@ -35,7 +35,7 @@ function createTable(atms, table) {
  * Show the given list of ATMs in the table.
  *
  * @param results
- * @param {HTMLTableElement} table
+ * @param {HTMLElement} table
  */
 export default function showATMs(results, table) {
   // NOTE ATMs are sorting by distnce in asscending order from the start.

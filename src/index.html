@@ -39,9 +39,19 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row hide" id="atms-table">
       <div class="col s12">
-        <table class="highlight responsive-table hide" id="atms-table">
+        <div class="switch">
+          <label>
+            Show all ATMs
+            <input type="checkbox" id="multi-currency-filter">
+            <span class="lever"></span>
+            Show multi-currency ATMs only
+          </label>
+        </div>
+      </div>
+      <div class="col s12">
+        <table class="highlight responsive-table">
           <thead>
             <tr>
               <th>Name</th>
