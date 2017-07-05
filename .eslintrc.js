@@ -3,7 +3,8 @@ module.exports = {
         "browser": true
     },
     "globals": {
-      "google": true
+        "google": true,
+        "GOOGLE_API_KEY": true
     },
     "extends": "airbnb-base"
 };

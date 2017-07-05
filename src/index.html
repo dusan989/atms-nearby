@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <title>ATMs Nearby</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="/main.css">
 </head>
 <body>
 
@@ -68,8 +67,6 @@
   </div>
 </main>
 
-<script type="text/javascript">window.googleKey = 'AIzaSyCdWkrVHdnJpcyv1TBPz5XtQesrTaPyX5M';</script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdWkrVHdnJpcyv1TBPz5XtQesrTaPyX5M&libraries=places,geometry"></script>
-<script src="/main.bundle.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= htmlWebpackPlugin.options.googleApiKey %>&libraries=places,geometry"></script>
 </body>
 </html>

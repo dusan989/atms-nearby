@@ -6,10 +6,18 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server --open",
+    "build:dev": "npm run clean:dist && NODE_ENV=dev webpack --progress --profile",
+    "build:prod": "npm run clean:dist && NODE_ENV=prod webpack --progress --profile --bail",
+    "clean:dist": "npm run rimraf -- dist",
     "eslint": "eslint",
-    "test": "eslint --ext .js src/",
+    "lint": "npm run eslint --ext .js src/",
+    "rimraf": "rimraf",
+    "server:dev": "webpack-dev-server --open --progress --profile --watch --content-base src/",
+    "server:prod": "http-server dist -c-1",
+    "start": "npm run server:dev",
+    "test": "npm run lint",
+    "watch:dev": "npm run build:dev -- --watch",
+    "watch:prod": "npm run build:prod -- --watch",
     "webpack": "webpack",
     "webpack-dev-server": "webpack-dev-server"
   },
@@ -23,14 +31,19 @@
     "eslint-plugin-import": "^2.6.1",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.29.0",
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
+    "rimraf": "^2.6.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
+    "uglify-js": "^3.0.23",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.5.0"
   },
   "dependencies": {
+    "http-server": "^0.10.0",
     "materialize-css": "^0.99.0"
   }
 }
