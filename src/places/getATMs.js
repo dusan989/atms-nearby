@@ -16,7 +16,7 @@ function calculateDistance(latLngA, latLngB) {
  * @return string
  */
 function getMiniMap(center) {
-  return `https://maps.googleapis.com/maps/api/staticmap?center=${center.lat()},${center.lng()}&zoom=15&size=250x250&markers=color:red|${center.lat()},${center.lng()}&key=${window.googleKey}`;
+  return `https://maps.googleapis.com/maps/api/staticmap?center=${center.lat()},${center.lng()}&zoom=14&size=250x150&markers=color:red|${center.lat()},${center.lng()}&key=${window.googleKey}`;
 }
 
 /**
