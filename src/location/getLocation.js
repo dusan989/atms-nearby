@@ -25,13 +25,13 @@ const handleError = reject => ((error) => {
   let code;
 
   switch (error.code) {
-    case '1':
+    case 1:
       code = errorCodes.PERMISSION_DENIED;
       break;
-    case '2':
+    case 2:
       code = errorCodes.POSITION_UNAVAILABLE;
       break;
-    case '3':
+    case 3:
       code = errorCodes.TIMEOUT;
       break;
     default:
